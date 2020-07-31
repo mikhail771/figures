@@ -1,0 +1,5 @@
+package model;
+
+public enum Colors {
+    RED, BLUE, YELLOW, BLACK, WHITE, TRANSPARENT
+}

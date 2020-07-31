@@ -10,9 +10,8 @@ public class Main {
         for (int i = 0; i < figures.length; i++) {
             figures[i] = figureFactory.createFigure(random.nextInt(4));
         }
-        for (Figure figure :
-                figures) {
-            System.out.println(figure);
+        for (Figure figure : figures) {
+            System.out.println(figure.draw());
         }
     }
 }

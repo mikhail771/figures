@@ -2,10 +2,16 @@ package model;
 
 import java.util.Random;
 
-public class Trapezoid extends Figure {
+public class Triangle extends Figure {
+    public double side;
+
+    public Triangle(double side) {
+        this.side = side;
+    }
     public String draw() {
-        return "Фигура: трапеция," +
+        return "Фигура: треугольник," +
                 " площадь: " + getArea() + " кв. ед.," +
+                " гипотенуза: " + side +
                 " ед., цвет: " + getColor();
     }
 
@@ -15,6 +21,6 @@ public class Trapezoid extends Figure {
 
     public double getArea() {
         Random random = new Random();
-        return (random.nextDouble() + random.nextDouble()) / 2 * random.nextDouble();
+        return random.nextDouble() * random.nextDouble() / 2;
     }
 }

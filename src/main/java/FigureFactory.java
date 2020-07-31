@@ -1,17 +1,24 @@
-import model.*;
+import model.Circle;
+import model.Figure;
+import model.Square;
+import model.Triangle;
+import model.Trapezoid;
+
+import java.util.Random;
 
 public class FigureFactory {
     public Figure createFigure(int rand) {
+        Random parameter = new Random();
         switch (rand) {
             case 0:
-                return new Circle();
+                return new Circle(parameter.nextDouble());
             case 1:
-                return new Tringle();
+                return new Triangle(parameter.nextDouble());
             case 2:
-                return new Square();
+                return new Square(parameter.nextDouble());
             case 3:
                 return new Trapezoid();
         }
-        return null;
+        throw new RuntimeException("Figure doesn't exist");
     }
 }
